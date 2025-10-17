@@ -34,7 +34,7 @@ Pliki nagłówkowe dla programistów używających %{name}.
 
 %package progs
 Summary:	Programs for %{name}
-Summary(pl.UTF-8):	Proramy dla programistów używających %{name}
+Summary(pl.UTF-8):	Programy dla programistów używających %{name}
 Group:		Development
 Requires:	%{name} = %{version}-%{release}
 
