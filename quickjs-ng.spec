@@ -1,11 +1,11 @@
 Summary:	QuickJS - A mighty JavaScript engine
 Name:		quickjs-ng
-Version:	0.12.1
+Version:	0.13.0
 Release:	1
 License:	MIT
 Group:		Libraries
-Source0:	https://github.com/quickjs-ng/quickjs/archive/refs/tags/v%{version}.tar.gz
-# Source0-md5:	c8b38cd32c4e32c3c1129f0d179aed31
+Source0:	https://github.com/quickjs-ng/quickjs/archive/v%{version}/%{name}-%{version}.tar.gz
+# Source0-md5:	ee9c0d25409e6b2c140bc8ec4f707a77
 URL:		https://quickjs-ng.github.io/quickjs/
 BuildRequires:	meson
 BuildRequires:	ninja
