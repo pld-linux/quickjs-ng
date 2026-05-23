@@ -1,4 +1,5 @@
 Summary:	QuickJS - A mighty JavaScript engine
+Summary(pl.UTF-8):	QuickJS - potężny silnik JavaScriptu
 Name:		quickjs-ng
 Version:	0.15.0
 Release:	1
@@ -79,8 +80,8 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post -p /sbin/ldconfig
-%postun -p /sbin/ldconfig
+%post	-p /sbin/ldconfig
+%postun	-p /sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
