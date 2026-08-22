@@ -1,3 +1,7 @@
+#
+# Conditional build:
+%bcond_without	static_libs	# don't build static libraries
+#
 Summary:	QuickJS - A mighty JavaScript engine
 Summary(pl.UTF-8):	QuickJS - potężny silnik JavaScriptu
 Name:		quickjs-ng
@@ -69,7 +73,7 @@ Statyczna biblioteka quickjs-ng.
 %setup -q -n quickjs-%{version}
 
 %build
-%meson
+%meson	%{!?with_static_libs:--default-library=shared}
 
 %meson_build
 
@@ -100,6 +104,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/qjs
 %attr(755,root,root) %{_bindir}/qjsc
 
+%if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/libqjs.a
+%endif
